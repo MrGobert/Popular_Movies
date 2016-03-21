@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Popular_movies2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1244" height="700"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zIT-Yv-ACc">
+                                <rect key="frame" x="0.0" y="0.0" width="1244" height="700"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ar1-j0-uu3">
+                                    <size key="itemSize" width="348" height="488"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="Ps8-xP-snE" customClass="MovieCell" customModule="Popular_movies2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="106" width="348" height="488"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="488"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="The-Godfather-Poster" translatesAutoresizingMaskIntoConstraints="NO" id="oCf-Pt-gzu">
+                                                    <rect key="frame" x="39" y="18" width="271" height="412"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="412" id="9xm-B8-3J0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Godfather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2N0-gr-WMg">
+                                                    <rect key="frame" x="39" y="452" width="271" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="SeW-qu-hOv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="oCf-Pt-gzu" firstAttribute="leading" secondItem="Ps8-xP-snE" secondAttribute="leadingMargin" constant="31" id="0mu-rn-XHq"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="oCf-Pt-gzu" secondAttribute="trailing" constant="30" id="KxM-4a-Rdf"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="2N0-gr-WMg" secondAttribute="trailing" constant="30" id="lch-2q-bS9"/>
+                                            <constraint firstItem="2N0-gr-WMg" firstAttribute="leading" secondItem="Ps8-xP-snE" secondAttribute="leadingMargin" constant="31" id="pKF-Cb-Bxz"/>
+                                            <constraint firstItem="2N0-gr-WMg" firstAttribute="top" secondItem="oCf-Pt-gzu" secondAttribute="bottom" constant="17" id="pO3-o7-cqS"/>
+                                            <constraint firstItem="oCf-Pt-gzu" firstAttribute="top" secondItem="Ps8-xP-snE" secondAttribute="topMargin" constant="15" id="uwe-W8-RQL"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="movieImg" destination="oCf-Pt-gzu" id="kiQ-ot-vb5"/>
+                                            <outlet property="movieLbl" destination="2N0-gr-WMg" id="7jN-E7-fin"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zIT-Yv-ACc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BMW-25-pck"/>
+                            <constraint firstItem="zIT-Yv-ACc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VcL-zd-pgp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zIT-Yv-ACc" secondAttribute="bottom" id="lke-gf-eIK"/>
+                            <constraint firstAttribute="trailing" secondItem="zIT-Yv-ACc" secondAttribute="trailing" id="pou-LY-7a0"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1244" height="700"/>
+                    <connections>
+                        <outlet property="collectionView" destination="zIT-Yv-ACc" id="w0q-L3-pYp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="327"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="The-Godfather-Poster" width="600" height="900"/>
+    </resources>
+</document>
